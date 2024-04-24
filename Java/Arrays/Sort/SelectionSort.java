@@ -2,7 +2,7 @@ package Sort;
 
 import java.util.Arrays;
 
-public class SortByIndex {
+public class SelectionSort {
     public static void AscendingOrder(int arr[]) {
         for (int i = 0; i < arr.length - 1; i++) {
             int minimumIndex = i;
