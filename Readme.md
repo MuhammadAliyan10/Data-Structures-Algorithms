@@ -2,9 +2,9 @@
 
 ## 🌐 Topics to cover
 
-- [ ] _Arrays_
+- [x] _Arrays_
 - [ ] _Complexity_
-- [ ] _Sorted Algorithm (Bubble Sort, Inserting Sort, Merge Sort, Selection Sort, Quinic Algorithm)_
+- [x] _Sorted Algorithm (Bubble Sort, Inserting Sort, Merge Sort, Selection Sort, Quinic Algorithm)_
 - [ ] _Hashing function, Hash Table_
 - [ ] _Stack_
 - [ ] _Queue_
