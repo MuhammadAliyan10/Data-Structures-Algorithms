@@ -1,4 +1,3 @@
-package Java.Arrays.Assignment;
 
 import java.util.Arrays;
 

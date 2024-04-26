@@ -1,4 +1,4 @@
-def quickSort(arr: list[int]) -> list[int]:
+def QuickSort(arr: list[int]) -> list[int]:
     if len(arr) <= 0:
         return arr
     else:
@@ -6,8 +6,8 @@ def quickSort(arr: list[int]) -> list[int]:
         lesser : list[int] = [ x for x in arr[1:] if x <= pivot]
         greater : list[int] = [x for x in arr[1:] if x>= pivot]
         
-        return quickSort(lesser) + [pivot] + quickSort(greater)
+        return QuickSort(lesser) + [pivot] + QuickSort(greater)
     
     
 arr: list[int] = [21,4,2,5,12,43]
-print(quickSort(arr))
+print(QuickSort(arr))

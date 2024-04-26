@@ -7,7 +7,7 @@ def InsertionSort(arr: list[int])->None:
         temp : int = arr[i]
         arr[i] = arr[maximumIndex]
         arr[maximumIndex] = temp
-    print(arr)
+    
     
 
 
