@@ -44,6 +44,11 @@ public class MergeSort {
             k++;
             i++;
         }
+        while (j <= right) {
+            array[k] = tempArray[j];
+            k++;
+            j++;
+        }
     }
 
     public static void main(String[] args) {
