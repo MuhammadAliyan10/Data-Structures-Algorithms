@@ -11,7 +11,6 @@ public class QuickSort {
             int lesserCount = 0;
             int greaterCount = 0;
 
-       
             for (int i = 1; i < arr.length; i++) {
                 if (arr[i] <= pivot) {
                     lesserCount++;
@@ -20,7 +19,6 @@ public class QuickSort {
                 }
             }
 
-           
             int lesser[] = new int[lesserCount];
             int greater[] = new int[greaterCount];
 
@@ -34,11 +32,9 @@ public class QuickSort {
                 }
             }
 
-         
             lesser = AscendingOrder(lesser);
             greater = AscendingOrder(greater);
 
-        
             int result[] = new int[arr.length];
             System.arraycopy(lesser, 0, result, 0, lesser.length);
             result[lesser.length] = pivot;
