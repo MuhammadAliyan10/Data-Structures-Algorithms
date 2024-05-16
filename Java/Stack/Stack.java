@@ -1,52 +1,35 @@
-package Java.Stack;
-
-import java.util.Arrays;
-
 public class Stack {
-    static int stackValue = -1;
-    static int stackArray[] = new int[100];
+    private int[] stackArray;
+    private int top;
 
-    public void showStackArray() {
-        System.out.println(Arrays.toString(stackArray));
+    public Stack(int capacity) {
+        stackArray = new int[capacity];
+        top = -1;
     }
 
-    public void showStackIndex() {
-        System.out.println(stackValue);
-    }
-
-    private void push(int number) {
-        if (stackValue < stackArray.length) {
-            ++stackValue;
-            stackArray[stackValue] = number;
+    public void push(int number) {
+        if (top < stackArray.length - 1) {
+            stackArray[++top] = number;
         } else {
             System.out.println("The stack is full.");
         }
     }
 
-    private void pop() {
-        if (stackValue >= 0) {
-            stackValue--;
-            stackArray[stackValue + 1] = 0;
+    public int pop() {
+        if (!isEmpty()) {
+            return stackArray[top--];
         } else {
             System.out.println("No value is in the stack.");
+            return -1;
         }
 
     }
 
+    public boolean isEmpty() {
+        return top == -1;
+    }
+
     public static void main(String[] args) {
-        Stack stack = new Stack();
-        stack.push(5);
-        stack.showStackArray();
-        stack.showStackIndex();
-        stack.push(10);
-        stack.showStackArray();
-        stack.showStackIndex();
-        stack.pop();
-        stack.showStackArray();
-        stack.showStackIndex();
-        stack.pop();
-        stack.showStackArray();
-        stack.showStackIndex();
-        stack.pop();
+
     }
 }
