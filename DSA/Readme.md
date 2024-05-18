@@ -20,10 +20,6 @@ _Big O is the mathematical notation used to describe the upper bound of the time
 
     ```
 
-  ```
-
-  ```
-
 - **O(log n)-Logarithmic Time**
 
   - _The time increases logarithmically as the input size increases._
@@ -37,31 +33,9 @@ _Big O is the mathematical notation used to describe the upper bound of the time
         }
     ```
 
-  ```
-
-  ```
-
 - **O(n)-Linear Time**
 
   - _TThe time increases linearly with the input size._
-  - ```java
-        public int sumArray(int[] array) {
-            int sum = 0;
-            for (int num : array) {
-             sum += num;
-            }
-         return sum;
-        }
-
-    ```
-
-  ```
-
-  ```
-
-- **O(n log n)-Linearithmic Time**
-
-  - _The time complexity grows proportionally to n log n._
   - ```java
         public int binarySearch(int[] array, int target) {
             int low = 0;
@@ -82,9 +56,9 @@ _Big O is the mathematical notation used to describe the upper bound of the time
 
     ```
 
-  ```
+- **O(n log n)-Linearithmic Time**
 
-  ```
+  - _The time complexity grows proportionally to n log n._
 
 - **O(n^2) - Quadratic time**
 
@@ -99,10 +73,6 @@ _Big O is the mathematical notation used to describe the upper bound of the time
         }
 
     ```
-
-  ```
-
-  ```
 
 - **O(2^n) - Exponential time**
 
