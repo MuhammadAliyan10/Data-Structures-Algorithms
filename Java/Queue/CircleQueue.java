@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
-class QueueArray {
+class CircularQueue {
     int front = -1;
     int rear = -1;
-    int size = 5;
+    int size = 3;
     int queue[] = new int[size];
 
     void underFlow() {
@@ -15,26 +15,31 @@ class QueueArray {
     }
 
     void enQueue(int element) {
-        if (rear == size - 1) {
+        if ((rear + 1) % size == front) {
             overFlow();
             return;
-        }
-        if (front == -1)
+        } else if (front == -1) {
             front = 0;
-        queue[++rear] = element;
-        System.out.println("Element Enqueued: " + element);
+            rear = 0;
+        } else {
+            rear = (rear + 1) % size;
+        }
+        queue[rear] = element;
+        System.out.println("Element Enqueued: " + element + " Enqueued at index " + rear);
     }
 
     void deQueue() {
-        if (front == -1 || front > rear) {
+        if (front == -1) {
             underFlow();
             return;
         }
-        int dequeuedElement = queue[front++];
-        System.out.println("Element Dequeued: " + dequeuedElement);
-        if (front > rear) {
+        int dequeuedElement = queue[front];
+        System.out.println("Element Dequeued: " + dequeuedElement + " Dequeued from index " + front);
+        if (front == rear) {
             front = -1;
             rear = -1;
+        } else {
+            front = (front + 1) % size;
         }
     }
 
@@ -44,17 +49,26 @@ class QueueArray {
             return;
         }
         System.out.println("Queue: ");
-        for (int i = front; i <= rear; i++) {
-            System.out.print(queue[i] + " ");
+        if (rear >= front) {
+            for (int i = front; i <= rear; i++) {
+                System.out.print(queue[i] + " ");
+            }
+        } else {
+            for (int i = front; i < size; i++) {
+                System.out.print(queue[i] + " ");
+            }
+            for (int i = 0; i <= rear; i++) {
+                System.out.print(queue[i] + " ");
+            }
         }
         System.out.println();
     }
 }
 
-public class queue {
+public class CircleQueue {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        QueueArray queue = new QueueArray();
+        CircularQueue queue = new CircularQueue();
 
         int choice;
         do {
