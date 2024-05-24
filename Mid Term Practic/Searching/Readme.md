@@ -1,6 +1,6 @@
 ## Linear Search
 
-_Time complexity of the linear search is O(n), where n is the number of element in the array. Because the worst case the algorithm will have the check all the element in the array if the number is not in the array or if he found the target._
+_Time complexity of the linear search is O(n), where n is the number of element in the array. Because the worst case of the algorithm will have to check all the element in the array (if the number is not in the array or if the target is at the end)._
 
 ### Time Complexity Analysis
 
