@@ -1,4 +1,4 @@
-package Java.Stack.Assignment;
+package Assignment;
 
 import java.util.Arrays;
 
