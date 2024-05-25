@@ -1,37 +1,34 @@
-def mergeSort(arr: list[int]) -> None:
-    if arr == None or  len(arr) <= 1:
-        return
-    tempArr : list[int] = [0] * len(arr) 
-    sortElements(arr, tempArr, 0, len(arr) -1)
+def mergeSort(arr:list[int]):
+    if len(arr) > 1:
+        mid : int = len(arr)//2
+        left = arr[mid:]
+        right = arr[:mid]
+        mergeSort(left)
+        mergeSort(right)
 
-def sortElements(arr: list[int], tempArr: list[int], left : int, right: int ) -> None:
-    if left < right:
-        mid : int = left + (right -left) //2;
-        sortElements(arr, tempArr, left, mid)
-        sortElements(arr, tempArr, mid + 1, right)
-        mergeValues(arr, tempArr, left, mid, right)
+        i=j=k=0
+        while i< len(left) and j < len(right):
+            if left[i] < right[j]:
+                arr[k] = left[i]
+                i += 1
+            else:
+                arr[k] = right[j]
+                j += 1
+            k+=1
+        
+        while i< len(left):
+            arr[k] = left[i]
+            i+=1
+            k+=1
+        while j< len(right):
+            arr[k] = right[j]
+            j+=1
+            k+=1
+
+        return arr
     
-def mergeValues(arr: list[int], tempArr: list[int], left: int, mid:int, right: int) -> None:
-    for i in range(left, right + 1):
-        tempArr[i] = arr[i]
 
-    i : int = left
-    j : int = mid + 1
-    k : int = left
-    while i <= mid and j <= right:
-        if tempArr[i] <= tempArr[j]:
-            arr[k] = tempArr[i]
-            i += 1
-        else:
-            arr[k] = tempArr[j]
-            j += 1
-        k += 1
-    while i<= mid:
-        arr[k] = tempArr[i]
-        i += 1
-        k += 1
+arr = [12, 11, 13, 5, 6, 7]
+print(mergeSort(arr))
 
-
-arr : list[int] = [43,23,5,32,54,67,3]
-mergeSort(arr)
-print(arr)
+    

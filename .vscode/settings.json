@@ -1,4 +1,4 @@
 {
   "python.analysis.extraPaths": ["./Python/Arrays/Sort"],
-  "cSpell.words": ["Linearithmic"]
+  "cSpell.words": ["Linearithmic", "sublist"]
 }
