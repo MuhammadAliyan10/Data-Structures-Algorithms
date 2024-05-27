@@ -4,9 +4,9 @@ _Bubble Sort repeatedly steps through the list, compares adjacent elements, and 
 
 ### Time Complexity Analysis
 
-_Best Case: O(n)_
-_Average Case : O(n ^ 2)_
-_Worst Case: O(n ^ 2)_
+- _Best Case: O(n)_
+- _Average Case : O(n ^ 2)_
+- _Worst Case: O(n ^ 2)_
 
 ### Space Complexity Analysis
 
@@ -39,9 +39,9 @@ _Insertion Sort builds the final sorted array one item at a time. It is much les
 
 ### Time Complexity Analysis
 
-_Best Case: O(n)_
-_Average Case : O(n^2)_
-_Worst Case: O(n^2)_
+- _Best Case: O(n)_
+- _Average Case : O(n^2)_
+- _Worst Case: O(n^2)_
 
 ### Space Complexity Analysis
 
@@ -69,9 +69,9 @@ _Selection Sort divides the input list into two parts: the sublist of items alre
 
 ### Time Complexity Analysis
 
-_Best Case: O(n^2)_
-_Average Case : O(n^2)_
-_Worst Case: O(n^2)_
+- _Best Case: O(n^2)_
+- _Average Case : O(n^2)_
+- _Worst Case: O(n^2)_
 
 ### Space Complexity Analysis
 
@@ -101,9 +101,9 @@ _Merge Sort is an efficient, stable, comparison-based, divide and conquer sortin
 
 ### Time Complexity Analysis
 
-_Best Case: O(n log n)_
-_Average Case : O(n log n)_
-_Worst Case: O(n log n)_
+- _Best Case: O(n log n)_
+- _Average Case : O(n log n)_
+- _Worst Case: O(n log n)_
 
 ### Space Complexity Analysis
 
@@ -168,9 +168,9 @@ _Quick Sort is a highly efficient sorting algorithm and is based on partitioning
 
 ### Time Complexity Analysis
 
-_Best Case: O(n log n)_
-_Average Case : O(n log n)_
-_Worst Case: O(n ^ 2) (When the smallest and largest element is always chosen as a pivot)_
+- _Best Case: O(n log n)_
+- _Average Case : O(n log n)_
+- _Worst Case: O(n ^ 2) (When the smallest and largest element is always chosen as a pivot)_
 
 ### Space Complexity Analysis
 

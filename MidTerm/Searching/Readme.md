@@ -4,9 +4,9 @@ _Time complexity of the linear search is O(n), where n is the number of element 
 
 ### Time Complexity Analysis
 
-_Best Case: O(1)_
-_Average Case : O(n)_
-_Worst Case: O(n)_
+- _Best Case: O(1)_
+- _Average Case : O(n)_
+- _Worst Case: O(n)_
 
 - _The input array has n element._
 - _The loop iterates over each array._
@@ -44,9 +44,9 @@ _The space complexity is O(1)_
 
 ### Time Complexity Analysis
 
-_Best Case: O(1)_
-_Average Case : O(log n)_
-_Worst Case: O(log n)_
+- _Best Case: O(1)_
+- _Average Case : O(log n)_
+- _Worst Case: O(log n)_
 
 - _First sorting the array taken O(n log n) time._
 - _It is because the most efficient algorithm like quick sort, merge sort operate with this time complexity._
