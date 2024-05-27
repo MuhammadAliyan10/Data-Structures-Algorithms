@@ -4,6 +4,10 @@ _Time complexity of the linear search is O(n), where n is the number of element 
 
 ### Time Complexity Analysis
 
+_Best Case: O(1)_
+_Average Case : O(n)_
+_Worst Case: O(n)_
+
 - _The input array has n element._
 - _The loop iterates over each array._
 - _In the worst case the loop runs n time(if the element is not found in the array.)_
@@ -12,6 +16,8 @@ _Time complexity of the linear search is O(n), where n is the number of element 
 **Putting all together the overall time complexity of the linear search is O(n) because the loop runs n time the operation within the loop are O(1).**
 
 ### Space Complexity Analysis
+
+_The space complexity is O(1)_
 
 - _The input array itself required O(n) space, but this is given as the part of the problem._
 - _The algorithm used a fixed amount of additional space for variable (i and target) which is O(1)_
@@ -38,6 +44,10 @@ _Time complexity of the linear search is O(n), where n is the number of element 
 
 ### Time Complexity Analysis
 
+_Best Case: O(1)_
+_Average Case : O(log n)_
+_Worst Case: O(log n)_
+
 - _First sorting the array taken O(n log n) time._
 - _It is because the most efficient algorithm like quick sort, merge sort operate with this time complexity._
 - _Once the sorting is done the binary search takes O(log n) time._
@@ -46,6 +56,8 @@ _Time complexity of the linear search is O(n), where n is the number of element 
 **Since the sorting step is necessary, the overall time complexity of the function, which includes sorting and then searching is O (n log n).**
 
 ### Space Complexity Analysis
+
+_Space complexity is O(1) iterative version and O(log n) recursive version._
 
 - _The space complexity of the sorting depend upon which sorting algorithm is used._
 - _In Arrays.Sort(), It use quick sort which time complexity is O(log n)._

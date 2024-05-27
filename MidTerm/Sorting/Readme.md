@@ -4,7 +4,9 @@ _Bubble Sort repeatedly steps through the list, compares adjacent elements, and 
 
 ### Time Complexity Analysis
 
-_The worst time complexity of bubble sort is O(n^2). The best time complexity is O(n) if its already sorted._
+_Best Case: O(n)_
+_Average Case : O(n ^ 2)_
+_Worst Case: O(n ^ 2)_
 
 ### Space Complexity Analysis
 
@@ -33,11 +35,13 @@ _The space complexity of bubble sort is O(1) constant because all the variable t
 
 ## Insertion Sort
 
-_Insertion Sort builds the final sorted array one item at a time. It is much less efficient on large lists than more advanced algorithms such as quicksort, heapsort, or merge sort._
+_Insertion Sort builds the final sorted array one item at a time. It is much less efficient on large lists than more advanced algorithms such as quicksort, heap sort, or merge sort._
 
 ### Time Complexity Analysis
 
-_The time complexity of insertion sort is O(n^2). As the size increases the outer loop execution increases because its start with the length and the inner loop also depend on the length of the input._
+_Best Case: O(n)_
+_Average Case : O(n^2)_
+_Worst Case: O(n^2)_
 
 ### Space Complexity Analysis
 
@@ -65,7 +69,9 @@ _Selection Sort divides the input list into two parts: the sublist of items alre
 
 ### Time Complexity Analysis
 
-_The time complexity of selection sort is O(n^2). As the size increases the outer loop execution increases because its start with the length and the inner loop also depend on the length of the input._
+_Best Case: O(n^2)_
+_Average Case : O(n^2)_
+_Worst Case: O(n^2)_
 
 ### Space Complexity Analysis
 
@@ -95,7 +101,9 @@ _Merge Sort is an efficient, stable, comparison-based, divide and conquer sortin
 
 ### Time Complexity Analysis
 
-_The time complexity of merge sort is O(n log n)._
+_Best Case: O(n log n)_
+_Average Case : O(n log n)_
+_Worst Case: O(n log n)_
 
 ### Space Complexity Analysis
 
@@ -160,13 +168,13 @@ _Quick Sort is a highly efficient sorting algorithm and is based on partitioning
 
 ### Time Complexity Analysis
 
-_The time complexity of quick sort is O(n ^ 2)._
-
-- _The worst case occurs when the pivot chosen is always the smallest or largest element, resulting in one subarray of size 𝑛−1 and another of size 0._
+_Best Case: O(n log n)_
+_Average Case : O(n log n)_
+_Worst Case: O(n ^ 2) (When the smallest and largest element is always chosen as a pivot)_
 
 ### Space Complexity Analysis
 
-_The space complexity of quick sort is O(n)._
+_The space complexity of quick sort is O(log n)._
 
 ## Code
 
