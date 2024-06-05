@@ -10,11 +10,11 @@ class Node {
     }
 }
 
-public class LinkList {
+public class SinglyLinkedList {
     private Node head;
     private Node tail;
 
-    public LinkList() {
+    public SinglyLinkedList() {
         this.head = null;
         this.tail = null;
     }
@@ -54,7 +54,6 @@ public class LinkList {
         if (head == null) {
             return;
         }
-
         if (head.data == data) {
             head = head.next;
             if (head == null) {
@@ -62,21 +61,16 @@ public class LinkList {
             }
             return;
         }
-
         Node current = head;
         Node previous = null;
-
         while (current != null && current.data != data) {
             previous = current;
             current = current.next;
         }
-
         if (current == null) {
             return;
         }
-
         previous.next = current.next;
-
         if (current.next == null) {
             tail = previous;
         }
@@ -94,11 +88,10 @@ public class LinkList {
     }
 
     public static void main(String[] args) {
-        LinkList linkedList = new LinkList();
+        SinglyLinkedList linkedList = new SinglyLinkedList();
         linkedList.add(0);
         linkedList.add(1);
         linkedList.add(2);
-        linkedList.delete(2);
         linkedList.showNode();
     }
 }
