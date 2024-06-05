@@ -24,7 +24,6 @@ class Stack {
             System.out.println("No value is in the stack.");
             return -1;
         }
-
     }
 
     public void insertAtBottom(int value) {
@@ -38,19 +37,26 @@ class Stack {
     }
 
     public void reverse() {
-        if (isEmpty()) {
-            return;
-        }
-        int size = top + 1;
-        for (int i = 0; i < size / 2; i++) {
-            int temp = stackArray[i];
-            stackArray[i] = stackArray[top - i];
-            stackArray[top - i] = temp;
+        if (!isEmpty()) {
+            int temp = pop();
+            reverse();
+            insertAtBottom(temp);
         }
     }
 
     public boolean isEmpty() {
         return top == -1;
+    }
+
+    public void display() {
+        if (isEmpty()) {
+            System.out.println("The stack is empty.");
+            return;
+        }
+        for (int i = 0; i <= top; i++) {
+            System.out.print(stackArray[i] + " ");
+        }
+        System.out.println();
     }
 }
 
@@ -71,15 +77,11 @@ public class ReverseStack {
         myStack.push(30);
 
         System.out.println("Original Stack:");
-        while (!myStack.isEmpty()) {
-            System.out.print(myStack.pop() + " ");
-        }
+        myStack.display();
 
         reverseStack(myStack);
 
-        System.out.println("\nReversed Stack:");
-        while (!myStack.isEmpty()) {
-            System.out.print(myStack.pop() + " ");
-        }
+        System.out.println("Reversed Stack:");
+        myStack.display();
     }
 }

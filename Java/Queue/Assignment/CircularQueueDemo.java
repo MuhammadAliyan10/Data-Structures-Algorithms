@@ -6,7 +6,16 @@ class CircularQueue {
     int front = -1;
     int rear = -1;
     int size = 3;
-    int queue[] = new int[size];
+    int[] queue;
+
+    CircularQueue() {
+        queue = new int[size];
+    }
+
+    CircularQueue(int size) {
+        this.size = size;
+        queue = new int[this.size];
+    }
 
     void underFlow() {
         System.out.println("Queue is empty!");
@@ -67,7 +76,7 @@ class CircularQueue {
     }
 }
 
-public class CircleQueue {
+public class CircularQueueDemo {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         CircularQueue queue = new CircularQueue();
