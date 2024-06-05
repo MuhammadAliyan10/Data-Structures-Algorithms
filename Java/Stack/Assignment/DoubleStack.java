@@ -2,7 +2,7 @@ package Assignment;
 
 import java.util.Arrays;
 
-public class Stack {
+public class DoubleStack {
     static int stackValueLeft = -1;
     static int stackArray[] = new int[100];
     static int stackValueRight = stackArray.length;
@@ -54,7 +54,7 @@ public class Stack {
     }
 
     public static void main(String[] args) {
-        Stack stack = new Stack();
+        DoubleStack stack = new DoubleStack();
         stack.pushfromLeft(5);
         stack.showStackArray();
         stack.showStackIndex();
