@@ -1,4 +1,3 @@
-package Assignment;
 
 class Stack {
     private int[] stackArray;

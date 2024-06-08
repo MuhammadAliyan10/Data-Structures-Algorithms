@@ -2,7 +2,7 @@ def BinarySearch(arr:list[int], searchNumber:int)-> int:
     arr = sorted(arr)
     left : int = 0
     right: int = len(arr) -1
-    while( left <= right):
+    while(left <= right):
         mid: int = left + (right - left) // 2
         if arr[mid] == searchNumber:
             return mid

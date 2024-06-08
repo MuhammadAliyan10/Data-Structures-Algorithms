@@ -36,6 +36,8 @@ if __name__ == '__main__':
         endTime = time.time()
         duration = endTime - startTime
         print(f"Quick sort takes {round(duration,3)}'s duration.")
+
+        
     BubbleSortTimeOut()
     QuickSortTimeOut()
     InsertionSortTimeOut()

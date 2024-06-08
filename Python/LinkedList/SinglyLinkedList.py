@@ -7,6 +7,7 @@ class LinkedList:
     def __init__(self):
         self.head= None;
         self.tail = None;
+    
     def add(self, data):
         newNode = Node(data)
         if self.head == None:
@@ -21,6 +22,7 @@ class LinkedList:
         while current != None:
             print(f"Data: {current.data}")
             current = current.next
+
     def search(self, data):
         current = self.head
         while current != None:

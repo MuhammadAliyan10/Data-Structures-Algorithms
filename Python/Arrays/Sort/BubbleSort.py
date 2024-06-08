@@ -1,6 +1,3 @@
-
-
-
 def BubbleSort(arr: list[int]) -> None:
     for i in range(len(arr)-1,-1,-1):
         for j in range(0,i):

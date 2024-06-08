@@ -1,4 +1,3 @@
-package Assignment;
 
 public class TwoStacks {
     private int[] arr;

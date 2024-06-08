@@ -1,5 +1,3 @@
-package Assignment;
-
 import java.util.Scanner;
 
 class CircularQueue {
