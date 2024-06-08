@@ -1,12 +1,12 @@
 class Node:
-    def __init__(self, data):
-        self.data= data
-        self.next = None;
+    def __init__(self,data) -> None:
+        self.data = data
+        self.next = None
 
-class LinkedList:
-    def __init__(self):
-        self.head= None;
-        self.tail = None;
+class CircularSinglyLinkedList:
+    def __init__(self) -> None:
+        self.head = None
+        self.tail = None
     
     def add(self, data):
         newNode = Node(data)
@@ -16,22 +16,10 @@ class LinkedList:
         else:
             self.tail.next = newNode
             self.tail = newNode
+        if self.tail.next == None:
+            self.tail.next = self.head
 
-    def showNode(self):
-        current = self.head
-        while current != None:
-            print(f"Data: {current.data}")
-            current = current.next
-
-    def search(self, data):
-        current = self.head
-        while current != None:
-            if current.data == data:
-                return True
-            current = current.next
-        return False
-    
-    def delete(self, data):
+    def remove(self, data):
         if self.head == None:
             return
         
@@ -58,19 +46,24 @@ class LinkedList:
         if current.next is prev:
             self.tail = prev
     
-    def size(self):
+
+
+
+    def showCircularSinglyLinkedList(self):
         current = self.head
-        count = 0
-        while current != None:
-            count += 1
-            current = current.next
-        return count
+        print(current.data)
+        print(current.next)
+
+    
+
+             
+        
 
 
 
-linkList = LinkedList()
-linkList.add(1)
-linkList.add(2)
-linkList.add(3)
-print(linkList.delete(2))
-linkList.showNode()
+
+c = CircularSinglyLinkedList()
+c.add(10)
+c.add(20)
+c.add(30)
+c.showCircularSinglyLinkedList()
