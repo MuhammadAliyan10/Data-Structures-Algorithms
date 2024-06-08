@@ -78,7 +78,8 @@ doublyLinkedList.add(12)
 doublyLinkedList.add(13)
 doublyLinkedList.add(14)
 doublyLinkedList.showLeftToRight()
-doublyLinkedList.delete(12)
+doublyLinkedList.delete(11)
+doublyLinkedList.delete(14)
 doublyLinkedList.showLeftToRight()
         
         
