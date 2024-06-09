@@ -1,4 +1,5 @@
 {
   "python.analysis.extraPaths": ["./Python/Arrays/Sort"],
-  "cSpell.words": ["Linearithmic", "sublist"]
+  "cSpell.words": ["Linearithmic", "sublist"],
+  "java.debug.settings.onBuildFailureProceed": true
 }

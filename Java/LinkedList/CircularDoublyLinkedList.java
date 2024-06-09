@@ -3,18 +3,20 @@ package Java.LinkedList;
 class Node {
     int data;
     Node next;
+    Node prev;
 
     Node(int data) {
         this.data = data;
         this.next = null;
+        this.prev = null;
     }
 }
 
-public class CircularSinglyLinkedList {
+public class CircularDoublyLinkedList {
     private Node head;
     private Node tail;
 
-    CircularSinglyLinkedList() {
+    CircularDoublyLinkedList() {
         this.head = null;
         this.tail = null;
     }
@@ -24,10 +26,13 @@ public class CircularSinglyLinkedList {
         if (head == null) {
             head = newNode;
             tail = newNode;
-            tail.next = head;
+            head.next = head;
+            head.prev = head;
         } else {
-            tail.next = newNode;
+            newNode.prev = tail;
             newNode.next = head;
+            tail.next = newNode;
+            head.prev = newNode;
             tail = newNode;
         }
     }
@@ -56,29 +61,24 @@ public class CircularSinglyLinkedList {
                 tail = null;
             } else {
                 head = head.next;
+                head.prev = tail;
                 tail.next = head;
             }
             return;
         }
+
         Node current = head;
-        Node prev = null;
-
         do {
-            prev = current;
-            current = current.next;
             if (current.data == data) {
-                break;
+                current.prev.next = current.next;
+                current.next.prev = current.prev;
+                if (current == tail) {
+                    tail = current.prev;
+                }
+                return;
             }
+            current = current.next;
         } while (current != head);
-
-        if (current == head) {
-            return;
-        }
-
-        prev.next = current.next;
-        if (current == tail) {
-            tail = prev;
-        }
     }
 
     public void show() {
@@ -90,18 +90,19 @@ public class CircularSinglyLinkedList {
             System.out.println("The data address is " + current);
             System.out.println("The data is : " + current.data);
             System.out.println("The next address is : " + current.next);
+            System.out.println("The prev address is : " + current.prev);
             System.out.println(" ");
-
             current = current.next;
         } while (current != head);
     }
 
     public static void main(String[] args) {
-        CircularSinglyLinkedList list = new CircularSinglyLinkedList();
+        CircularDoublyLinkedList list = new CircularDoublyLinkedList();
         list.add(10);
         list.add(20);
         list.add(30);
-        list.delete(30);
+        list.add(40);
+        list.delete(10);
         list.show();
     }
 }

@@ -42,8 +42,8 @@ class CircularDoublyLinkedList:
 
         if not found:
             return
-
-
+        
+        
         if current == self.head and current == self.tail:
             self.head = None
             self.tail = None
