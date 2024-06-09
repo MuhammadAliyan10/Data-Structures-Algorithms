@@ -27,21 +27,23 @@ class CircularDoublyLinkedList:
     def remove(self, data):
         if self.head is None:
             return
-        
         current = self.head
         found = False
 
         while True:
+
             if current.data == data:
                 found = True
                 break
             current = current.next
+
             if current == self.head:
                 break
-        
+
         if not found:
             return
-        
+
+
         if current == self.head and current == self.tail:
             self.head = None
             self.tail = None
