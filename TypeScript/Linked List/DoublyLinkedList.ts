@@ -2,6 +2,7 @@ class DoublyNode {
   data: number;
   next: DoublyNode | null;
   prev: DoublyNode | null;
+
   constructor(data: number) {
     this.data = data;
     this.next = null;
@@ -12,26 +13,27 @@ class DoublyNode {
 class DoublyLinkedList {
   head: DoublyNode | null;
   tail: DoublyNode | null;
+
   constructor() {
     this.head = null;
     this.tail = null;
   }
+
   add(data: number): void {
     const newNode = new DoublyNode(data);
-    if (this.head == null) {
+    if (this.head === null) {
       this.head = newNode;
       this.tail = newNode;
     } else {
-      if (this.tail != null) {
-        this.tail.next = newNode;
-        newNode.prev = this.tail;
-        this.tail = newNode;
-      }
+      this.tail!.next = newNode;
+      newNode.prev = this.tail;
+      this.tail = newNode;
     }
   }
+
   search(data: number): boolean {
     let current = this.head;
-    while (current != null) {
+    while (current !== null) {
       if (current.data === data) {
         return true;
       }
@@ -41,7 +43,11 @@ class DoublyLinkedList {
   }
 
   delete(data: number): void {
-    if (this.head !== null && this.head.data == data) {
+    if (this.head === null) {
+      return;
+    }
+
+    if (this.head.data === data) {
       this.head = this.head.next;
       if (this.head !== null) {
         this.head.prev = null;
@@ -50,22 +56,27 @@ class DoublyLinkedList {
       }
       return;
     }
+
     let current: DoublyNode | null = this.head;
     while (current !== null && current.data !== data) {
       current = current.next;
     }
+
     if (current === null) {
       return;
     }
+
     if (current.next !== null) {
       current.next.prev = current.prev;
     } else {
       this.tail = current.prev;
     }
+
     if (current.prev !== null) {
       current.prev.next = current.next;
     }
   }
+
   show(): void {
     let current = this.head;
     while (current !== null) {
