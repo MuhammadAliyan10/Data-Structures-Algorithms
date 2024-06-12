@@ -3,7 +3,6 @@ package Presentation;
 import java.util.Stack;
 
 public class InfixToPrefix {
-    // Function to return precedence of operators
     static int precedence(char ch) {
         switch (ch) {
             case '+':
