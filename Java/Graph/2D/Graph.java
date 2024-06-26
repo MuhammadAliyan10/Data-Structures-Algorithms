@@ -1,4 +1,3 @@
-package Java.Graph;
 
 import java.util.Scanner;
 
@@ -38,6 +37,26 @@ public class Graph {
         }
     }
 
+    public void showGraph() {
+        for (int i = 0; i < numVertices; i++) {
+            for (int j = 0; j < numVertices; j++) {
+                System.out.print(adjMatrix[i][j] + " ");
+            }
+            System.out.print(" | Connected to: ");
+            boolean hasEdges = false;
+            for (int j = 0; j < numVertices; j++) {
+                if (adjMatrix[i][j] == 1) {
+                    System.out.print(j + " ");
+                    hasEdges = true;
+                }
+            }
+            if (!hasEdges) {
+                System.out.print("None");
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
         Scanner value = new Scanner(System.in);
 
@@ -49,14 +68,14 @@ public class Graph {
         int edges = value.nextInt();
 
         for (int i = 0; i < edges; i++) {
-            System.out.print("Enter source for edge " + (i + 1) + ": ");
+            System.out.print("Enter source for edge " + (i + 1) + " : ");
             int source = value.nextInt();
-            System.out.print("Enter destination for edge " + (i + 1) + ": ");
+            System.out.print("Enter destination for edge " + (i + 1) + " : ");
             int destination = value.nextInt();
             graph.addEdge(source, destination);
         }
 
-        graph.printGraph();
+        graph.showGraph();
 
         value.close();
     }
