@@ -32,8 +32,7 @@ public class BinarySearchTree {
     // }
 
     public static void main(String[] args) {
-        int nodes[] = { 20, };
-        // BinarySearchTree bt = BinarySearchTree();
+
     }
 
 }
