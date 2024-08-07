@@ -1,4 +1,3 @@
-package Java.Tree;
 
 class Node {
     int data;
@@ -19,12 +18,10 @@ public class BinarySearchTree {
         this.root = null;
     }
 
-    // Method to insert a new value into the BST
     public void insert(int data) {
         root = insertRec(root, data);
     }
 
-    // Recursive method to insert a new value
     private Node insertRec(Node root, int data) {
         if (root == null) {
             root = new Node(data);
@@ -38,12 +35,10 @@ public class BinarySearchTree {
         return root;
     }
 
-    // Method to search for a value in the BST
     public boolean search(int data) {
         return searchRec(root, data);
     }
 
-    // Recursive method to search for a value
     private boolean searchRec(Node root, int data) {
         if (root == null) {
             return false;
@@ -54,25 +49,22 @@ public class BinarySearchTree {
         return data < root.data ? searchRec(root.left, data) : searchRec(root.right, data);
     }
 
-    // Method for inorder traversal
-    public void inorderTraversal() {
-        inorderRec(root);
+    public void inOrderTraversal() {
+        inOrderRec(root);
         System.out.println();
     }
 
-    // Recursive method for inorder traversal
-    private void inorderRec(Node root) {
+    private void inOrderRec(Node root) {
         if (root != null) {
-            inorderRec(root.left);
+            inOrderRec(root.left);
             System.out.print(root.data + " ");
-            inorderRec(root.right);
+            inOrderRec(root.right);
         }
     }
 
     public static void main(String[] args) {
         BinarySearchTree bst = new BinarySearchTree();
 
-        // Inserting nodes into the BST
         bst.insert(50);
         bst.insert(30);
         bst.insert(20);
@@ -81,12 +73,10 @@ public class BinarySearchTree {
         bst.insert(60);
         bst.insert(80);
 
-        // Printing the inorder traversal of the BST
         System.out.println("Inorder Traversal:");
-        bst.inorderTraversal(); // Output: 20 30 40 50 60 70 80
+        bst.inOrderTraversal();
 
-        // Searching for values in the BST
-        System.out.println("Search 40: " + bst.search(40)); // Output: true
-        System.out.println("Search 90: " + bst.search(90)); // Output: false
+        System.out.println("Search 40: " + bst.search(40));
+        System.out.println("Search 90: " + bst.search(90));
     }
 }
