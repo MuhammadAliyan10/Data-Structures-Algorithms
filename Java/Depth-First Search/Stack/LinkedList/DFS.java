@@ -57,7 +57,7 @@ public class DFS {
                 }
             }
         }
-        System.out.println(); // Add a new line after the DFS completes
+        System.out.println();
     }
 
     public static void main(String[] args) {
