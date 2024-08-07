@@ -1,47 +1,5 @@
-class QueueNode {
-    int data;
-    QueueNode next;
-
-    QueueNode(int data) {
-        this.data = data;
-        this.next = null;
-    }
-}
-
-class Queue {
-    private QueueNode front, rear;
-
-    public Queue() {
-        this.front = this.rear = null;
-    }
-
-    public void enqueue(int data) {
-        QueueNode newNode = new QueueNode(data);
-        if (this.rear == null) {
-            this.front = this.rear = newNode;
-            return;
-        }
-        this.rear.next = newNode;
-        this.rear = newNode;
-    }
-
-    public int dequeue() {
-        if (this.front == null) {
-            System.out.println("Queue is empty");
-            return -1;
-        }
-        int data = this.front.data;
-        this.front = this.front.next;
-        if (this.front == null) {
-            this.rear = null;
-        }
-        return data;
-    }
-
-    public boolean isEmpty() {
-        return this.front == null;
-    }
-}
+import java.util.LinkedList;
+import java.util.Queue;
 
 class Graph {
     int[][] adjMatrix;
@@ -66,21 +24,19 @@ class Graph {
     }
 }
 
-public class DFS {
-    public static void dfs(Graph graph, int start, int numVertices) {
-        Queue queue = new Queue();
+public class BFS {
+    public static void bfs(Graph graph, int start, int numVertices) {
+        Queue<Integer> queue = new LinkedList<>();
         boolean[] visited = new boolean[numVertices];
-        queue.enqueue(start);
+        queue.add(start);
         visited[start] = true;
-
         while (!queue.isEmpty()) {
-            int vertex = queue.dequeue();
+            int vertex = queue.poll();
             System.out.print(vertex + " ");
             int[] adjVertices = graph.getAdjVertices(vertex);
-
             for (int i = 0; i < numVertices; i++) {
                 if (adjVertices[i] == 1 && !visited[i]) {
-                    queue.enqueue(i);
+                    queue.add(i);
                     visited[i] = true;
                 }
             }
@@ -102,6 +58,6 @@ public class DFS {
         graph.addEdge(4, 8);
         graph.addEdge(5, 9);
 
-        dfs(graph, 0, numVertices);
+        bfs(graph, 0, numVertices);
     }
 }
