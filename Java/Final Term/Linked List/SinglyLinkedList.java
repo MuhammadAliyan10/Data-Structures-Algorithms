@@ -54,7 +54,6 @@ public class SinglyLinkedList {
     void delete(int data) {
         if (head == null) {
             return;
-
         }
         if (head.data == data) {
             head = head.next;
@@ -71,7 +70,6 @@ public class SinglyLinkedList {
         }
         if (current == null) {
             return;
-
         }
         previous.next = current.next;
         if (current.next == null) {

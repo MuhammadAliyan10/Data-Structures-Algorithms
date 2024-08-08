@@ -73,7 +73,7 @@ public class BinarySearchTree {
         bst.insert(60);
         bst.insert(80);
 
-        System.out.println("Inorder Traversal:");
+        System.out.println("InOrder Traversal:");
         bst.inOrderTraversal();
 
         System.out.println("Search 40: " + bst.search(40));
